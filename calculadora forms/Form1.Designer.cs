@@ -43,6 +43,8 @@
             button13 = new Button();
             button14 = new Button();
             textBox1 = new TextBox();
+            button15 = new Button();
+            button16 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -137,7 +139,7 @@
             // 
             // button10
             // 
-            button10.Location = new Point(117, 360);
+            button10.Location = new Point(198, 244);
             button10.Name = "button10";
             button10.Size = new Size(75, 23);
             button10.TabIndex = 9;
@@ -183,17 +185,38 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(36, 244);
+            textBox1.Location = new Point(36, 215);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(237, 23);
+            textBox1.Size = new Size(318, 23);
             textBox1.TabIndex = 13;
             textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // button15
+            // 
+            button15.Location = new Point(117, 244);
+            button15.Name = "button15";
+            button15.Size = new Size(75, 23);
+            button15.TabIndex = 14;
+            button15.Text = "CE";
+            button15.UseVisualStyleBackColor = true;
+            button15.Click += button15_Click;
+            // 
+            // button16
+            // 
+            button16.Location = new Point(36, 244);
+            button16.Name = "button16";
+            button16.Size = new Size(75, 23);
+            button16.TabIndex = 15;
+            button16.Text = "C";
+            button16.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(384, 394);
+            Controls.Add(button16);
+            Controls.Add(button15);
             Controls.Add(textBox1);
             Controls.Add(button14);
             Controls.Add(button13);
@@ -232,5 +255,7 @@
         private Button button13;
         private Button button14;
         private TextBox textBox1;
+        private Button button15;
+        private Button button16;
     }
 }

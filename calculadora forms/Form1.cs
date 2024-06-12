@@ -75,6 +75,12 @@ namespace calculadora_forms
             textBox1.Text = textBox1.Text + "7";
 
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Length == 1) textBox1.Text = "0";
+            else textBox1.Text = textBox1.Text.Substring(0,textBox1.TextLength - 1);
+        }
     }
 
 
