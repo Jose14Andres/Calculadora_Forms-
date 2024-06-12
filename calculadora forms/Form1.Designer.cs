@@ -45,6 +45,7 @@
             textBox1 = new TextBox();
             button15 = new Button();
             button16 = new Button();
+            button17 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -164,6 +165,7 @@
             button12.TabIndex = 11;
             button12.Text = "+";
             button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
             // 
             // button13
             // 
@@ -187,7 +189,7 @@
             // 
             textBox1.Location = new Point(36, 215);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(318, 23);
+            textBox1.Size = new Size(237, 23);
             textBox1.TabIndex = 13;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -211,11 +213,22 @@
             button16.UseVisualStyleBackColor = true;
             button16.Click += button16_Click;
             // 
+            // button17
+            // 
+            button17.Location = new Point(279, 214);
+            button17.Name = "button17";
+            button17.Size = new Size(75, 23);
+            button17.TabIndex = 16;
+            button17.Text = "=";
+            button17.UseVisualStyleBackColor = true;
+            button17.Click += button17_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(384, 394);
+            Controls.Add(button17);
             Controls.Add(button16);
             Controls.Add(button15);
             Controls.Add(textBox1);
@@ -258,5 +271,6 @@
         private TextBox textBox1;
         private Button button15;
         private Button button16;
+        private Button button17;
     }
 }

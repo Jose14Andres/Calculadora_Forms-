@@ -1,13 +1,20 @@
 namespace calculadora_forms
 {
     public partial class Form1 : Form
+
     {
+        private double valorResultado;
+        private string operador;
+
+        public string OperatingSystem { get; private set; }
+
         public Form1()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
+
         {
             Button button = (Button)sender;
             textBox1.Text = textBox1.Text + "1";
@@ -84,13 +91,39 @@ namespace calculadora_forms
 
         private void button16_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length == 1) textBox1.Text = "0";
-            else textBox1.Text = textBox1.Text.Substring(0, textBox1.TextLength + 1);
+            if (textBox1.Text.Length == 1) textBox1.Text = "";
+            else textBox1.Text = textBox1.Text.Substring(0, textBox1.TextLength - 1);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            OperatingSystem = "+";
+            textBox1.Text = "0";
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            switch (operador)
+            {
+
+                case "+":
+                    textBox1.Text = (valorResultado + Double.Parse(textBox1.Text)).ToString();
+                    break;
+                case "-":
+                    textBox1.Text = (valorResultado - Double.Parse(textBox1.Text)).ToString();
+                    break;
+                case "*":
+                    textBox1.Text = (valorResultado * Double.Parse(textBox1.Text)).ToString();
+                    break;
+                case "/":
+                    textBox1.Text = (valorResultado / Double.Parse(textBox1.Text)).ToString();
+                    break;
+                default:
+                    break;
+
+            }    
+
         }
     }
-
-
-
-
 }
-
